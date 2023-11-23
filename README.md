@@ -5,5 +5,11 @@
 module "namespace" {
     source = "baydullod/namespace/kubernetes"
     name = "test"
+    labels = {
+        environment = "dev"
+    }
+annotations {
+    managed by = "terraform"
+}
 }
 ```
